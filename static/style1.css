@@ -1,0 +1,131 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto; /* Centrare pe pagina */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+}
+
+h2 {
+    color: #666;
+}
+
+.term-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.term-list li {
+    margin-bottom: 20px;
+}
+
+.term {
+    font-weight: bold;
+}
+
+.definition {
+    margin-left: 10px;
+}
+
+.approve, .reject, .logout, .modify {
+    text-decoration: none;
+    margin-left: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+
+.approve {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.reject {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.logout {
+    background-color: #007bff;
+    color: #fff;
+}
+.modify-form {
+    background-color: #f8f9fa; /* O nuanță ușoară de gri pentru fundalul formularului */
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 30px; /* Spațiu suplimentar deasupra formularului */
+}
+
+.modify-form label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.modify-form input[type="text"],
+.modify-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+.modify-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff; /* Culoarea tematică pentru buton */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.modify-form button:hover {
+    background-color: #0056b3; /* O nuanță mai închisă pentru efectul de hover */
+}
+
+/* Stiluri pentru butoanele de acțiune (aproba, respinge, modifică) */
+.action-button {
+    text-decoration: none;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.action-button.approve {
+    background-color: #28a745;
+}
+
+.action-button.reject {
+    background-color: #dc3545;
+}
+
+.action-button.modify {
+    background-color: #ffc107; 
+}
+
+.modify {
+    background-color: #17a2b8; 
+	color:white;
+}
+
+.modify:hover {
+    background-color: #138496; 
+}
+h1{
+text-align:center;
+}

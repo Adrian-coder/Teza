@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Administrator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+</head>
+<body>
+    <h2>Login Administrator</h2>
+    <form action="/login" method="post">
+        <input type="text" name="username" placeholder="Nume utilizator" required>
+        <input type="password" name="password" placeholder="Parola" required>
+        <button type="submit">Login</button>
+    </form>
+</body>
+</html>

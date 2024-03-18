@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Demo</title>
+   <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+
+<div id="loginForm">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <p id="loginError" style="color:red;"></p>
+</div>
+
+<script>function login() {
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+
+    // Предварительно заданные учетные данные
+    var correctUsername = "admin";
+    var correctPassword = "admin";
+
+    if (username === correctUsername && password === correctPassword) {
+        // Логика после успешного входа
+        alert("You are logged in!");
+        // Здесь можно редиректить пользователя на другую страницу или изменять содержимое страницы
+    } else {
+        // Если логин не успешен, показать сообщение об ошибке
+        document.getElementById('loginError').textContent = "Incorrect username or password!";
+    }
+}
+</script> 
+</body>
+</html>

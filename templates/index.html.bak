@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dicționar de Termeni</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Dicționar de Termeni</h1>
+    <h2>Caută un termen</h2>
+    <form action="/" method="post">
+        <input type="text" name="term" placeholder="Introduceti termenul" required>
+        <button type="submit">Caută</button>
+    </form>
+
+    {% if term %}
+    <h3>Definiție pentru "{{ term }}":</h3>
+    <p>{{ definition }}</p>
+{% endif %}
+
+    <h2>Adaugă un nou termen</h2>
+    <form action="/adauga" method="post">
+        <input type="text" name="new_term" placeholder="Termen nou" required>
+        <textarea name="new_definition" placeholder="Definiția termenului" required></textarea>
+        <button type="submit">Adaugă</button>
+    </form>
+
+    <h2>Termeni existenți</h2>
+    <ul>
+        {% for term in dictionar_matematic %}
+            <li>{{ term.term.capitalize() }}: {{ term.definition }}</li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>

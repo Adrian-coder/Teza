@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Admin Panel</h1>
+        <h2>Termeni noi în așteptare:</h2>
+        <ul class="term-list">
+            {% for termen in termeni_noi %}
+                <li>
+                    <span class="term">{{ termen.term }}</span>: 
+                    <span class="definition">{{ termen.definition }}</span>
+                    <a class="approve" href="{{ url_for('approve', term_id=termen.id) }}">Aprobă</a>
+                    <a class="modify" href="{{ url_for('modifica', term_id=termen.id) }}">Modifică</a>
+                    <a class="reject" href="{{ url_for('reject', term_id=termen.id) }}">Respinge</a>
+                </li>
+            {% endfor %}
+        </ul>
+        <a class="logout" href="{{ url_for('logout') }}">Logout</a>
+    </div>
+<div class="container">
+    <h2>Termeni existenți:</h2>
+    <ul class="term-list">
+        {% for termen in dictionar_matematic %}
+            <li>
+                <span class="term">{{ termen.term }}</span>: 
+                <span class="definition">{{ termen.definition }}</span>
+                <a class="action-button modify" href="{{ url_for('modifica', term_id=termen.id) }}">Modifică</a>
+                <a class="action-button reject" href="{{ url_for('sterge', term_id=termen.id) }}">Șterge</a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modifică Termen</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Modifică Termen</h1>
+        <form class="modify-form" action="{{ url_for('modifica', term_id=term.id) }}" method="post">
+            <label for="term">Termen:</label>
+            <input type="text" id="term" name="term" value="{{ term.term }}" required>
+
+            <label for="definition">Definiție:</label>
+            <textarea id="definition" name="definition" required>{{ term.definition }}</textarea>
+
+            <button type="submit">Actualizează</button>
+        </form>
+		<form action="{{ url_for('modifica', term_id=term.id) }}" method="post">
+    <label for="term">Termen:</label>
+    <input type="text" id="term" name="term" value="{{ term.term }}" required>
+
+    <label for="definition">Definiție:</label>
+    <textarea id="definition" name="definition" required>{{ term.definition }}</textarea>
+
+    <button type="submit" class="action-button">Actualizează</button>
+</form>
+    </div>
+</body>
+</html>
